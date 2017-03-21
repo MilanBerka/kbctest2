@@ -8,10 +8,6 @@ Created on Tue Mar 21 10:34:14 2017
 #gittest
 import pip
 pip.main(['install', '--disable-pip-version-check', '--no-cache-dir', 'pydrive'])
-pip.main(['install', '--disable-pip-version-check', '--no-cache-dir', 'io'])
-pip.main(['install', '--disable-pip-version-check', '--no-cache-dir', 'zipfile'])
-pip.main(['install', '--disable-pip-version-check', '--no-cache-dir', 'xml'])
-pip.main(['install', '--disable-pip-version-check', '--no-cache-dir', 'glob'])
 
 from pydrive.auth import GoogleAuth
 from pydrive.drive import GoogleDrive
