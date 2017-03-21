@@ -29,12 +29,6 @@ colName = parameters.get('colName')
 import pandas as pd
 import numpy as np
 
-  
-
-
-
-testFrame = pd.DataFrame({'id':[1,2,3],'value':[12,50,13]})
+testFrame = pd.DataFrame({'id':[1,2,3],colName:[12,50,13]})
 testFrame.to_csv('/data/out/tables/result.csv',index=None)
 
-if 'a' is str:
-    print('ahoj')
