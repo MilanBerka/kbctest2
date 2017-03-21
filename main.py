@@ -12,7 +12,7 @@ from keboola import docker
 cfg = docker.Config()
 parameters = cfg.get_parameters()
 colName = parameters.get('colName')
-if colName is string:
+if type(colName) is string:
   pass
 else:
   colName = str(colName)
