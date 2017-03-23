@@ -27,7 +27,7 @@ import numpy as np
 
 testFrame = pd.DataFrame({'id':[1,2,3],colName:[12,50,13]})
 testFrame.to_csv('/data/out/tables/result.csv',index=None)
-with open('in/files/a12DCDe4574AAAD.json') as json_data:
+with open('/data/in/files/a12DCDe4574AAAD.json') as json_data:
     d = json.load(json_data)
     print(d)
 
