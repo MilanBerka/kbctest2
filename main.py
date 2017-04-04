@@ -36,9 +36,14 @@ if __name__ == '__main__':
     gauth = GoogleAuth(settings_file='/data/in/files/253425786_settings.yaml')
     #    gauth.LocalWebserverAuth() # Creates local webserver and auto handles authentication.
     drive = GoogleDrive(gauth)
-    folderToLookAt = 'CSOB AM 2016'
-    driveFilesList = drive.ListFile({'q':"mimeType='application/vnd.google-apps.folder' and title='{}' and trashed=false".format(folderToLookAt)}).GetList()                        
-    print(driveFilesList[0]['id'])
+    
+    FOLDERS_TO_LOOKAT = ['CSOB AM 2016','CSOB AM 2017'] 
+    
+    finalDataFrame = None
+    
+    for folderToLookAt in FOLDERS_TO_LOOKAT:
+        driveFilesList = drive.ListFile({'q':"mimeType='application/vnd.google-apps.folder' and title='{}' and trashed=false".format(folderToLookAt)}).GetList()                        
+        print(driveFilesList[0]['id'])
     
 
     
