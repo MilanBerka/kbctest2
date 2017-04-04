@@ -28,9 +28,13 @@ import json
 
 testFrame = pd.DataFrame({'id':[1,2,3],colName:[12,50,13]})
 testFrame.to_csv('/data/out/tables/result.csv',index=None)
-with open('/data/in/files/253414451_settings.yaml') as shiiit:
-    print(shiiit.readlines())
-with open('/data/in/files/253410708_credentials.dat') as shiiit2:
-    print(shiiit2.readlines())
+if __name__ == '__main__':
+    with open('/data/in/files/253414451_settings.yaml') as shiiit:
+        print(shiiit.readlines())
+    with open('/data/in/files/253410708_credentials.dat') as shiiit2:
+        print(shiiit2.readlines())
+    gauth = GoogleAuth(settings_file='/data/in/files/253414451_settings.yaml')
+    #    gauth.LocalWebserverAuth() # Creates local webserver and auto handles authentication.
+    drive = GoogleDrive(gauth)
 
     
