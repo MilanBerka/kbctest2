@@ -28,7 +28,6 @@ import json
 
 testFrame = pd.DataFrame({'id':[1,2,3],colName:[12,50,13]})
 testFrame.to_csv('/data/out/tables/result.csv',index=None)
-with open('/data/in/files/249276569_a12dcde4574aaad.json') as json_data:
-    d = json.load(json_data)
-    print(d)
+with open('/data/in/files/253414451_settings.yaml') as json_data:
+    print(json_data)
 
